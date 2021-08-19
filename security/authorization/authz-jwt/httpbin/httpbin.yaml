@@ -16,7 +16,7 @@
 # httpbin service
 ##################################################################################################
 apiVersion: v1
-kind: ServiceAccount # Fornece uma identidade para processos executados em um pod.
+kind: ServiceAccount
 metadata:
   name: httpbin
   namespace: foo
