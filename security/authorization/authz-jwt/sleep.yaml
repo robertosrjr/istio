@@ -1,46 +1,46 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: httpbin
+  name: sleep
   namespace: jwt
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: httpbin
+  name: sleep
   namespace: jwt
   labels:
-    app: httpbin
-    service: httpbin
+    app: sleep
+    service: sleep
 spec:
   ports:
   - name: http
     port: 8000
     targetPort: 80
   selector:
-    app: httpbin
+    app: sleep
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: httpbin
+  name: sleep
   namespace: jwt
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: httpbin
+      app: sleep
       version: v1
   template:
     metadata:
       labels:
-        app: httpbin
+        app: sleep
         version: v1
     spec:
-      serviceAccountName: httpbin
+      serviceAccountName: sleep
       containers:
       - image: docker.io/kennethreitz/httpbin
         imagePullPolicy: IfNotPresent
-        name: httpbin
+        name: sleep
         ports:
         - containerPort: 80

@@ -1,7 +1,7 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: httpbin-gateway
+  name: sleep-gateway
   namespace: jwt
 spec:
   selector:
