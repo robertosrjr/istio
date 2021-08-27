@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - httpbin-gateway
+  - my-gateway
   http:
   - route:
     - destination:

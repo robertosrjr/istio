@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*"
   gateways:
-  - sllep-gateway
+  - my-gateway
   http:
   - name: "sleep"
     match:
