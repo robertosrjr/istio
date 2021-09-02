@@ -1,8 +1,8 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  name: my-gateway
-  namespace: jwt
+  name: authz-jwt-gateway
+  namespace: authz-jwt
 spec:
   selector:
     istio: ingressgateway

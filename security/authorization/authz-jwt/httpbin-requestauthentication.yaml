@@ -2,7 +2,7 @@ apiVersion: security.istio.io/v1beta1
 kind: RequestAuthentication
 metadata:
   name: "jwt-example"
-  namespace: jwt
+  namespace: authz-jwt
 spec:
   selector:
     matchLabels:

@@ -2,13 +2,13 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: sleep
-  namespace: jwt
+  namespace: authz-jwt
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: sleep
-  namespace: jwt
+  namespace: authz-jwt
   labels:
     app: sleep
     service: sleep
@@ -24,7 +24,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sleep
-  namespace: jwt
+  namespace: authz-jwt
 spec:
   replicas: 1
   selector:
@@ -44,3 +44,4 @@ spec:
         name: sleep
         ports:
         - containerPort: 80
+        
